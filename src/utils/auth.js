@@ -12,6 +12,7 @@ const userExist = async (_email) => {
   return users._results.length === 0;
 };
 
+// Getting the field if it exists
 const getUser = (sql, searchParameter) => {
   return new Promise((resolve, reject) => {
     db.query(sql, [`${searchParameter}`], (err, results) => {
