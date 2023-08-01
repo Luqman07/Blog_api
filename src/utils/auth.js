@@ -32,7 +32,7 @@ const generateTokens = async (user) => {
       process.env.REFRESH_TOKEN_SECRET,
       { expiresIn: "1d" }
     );
-    
+
     return { accessToken, refreshToken };
   } catch (error) {
     throw new Error(error.message);

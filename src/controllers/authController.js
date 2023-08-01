@@ -29,7 +29,7 @@ const register = async (req, res) => {
     db.query(sql, user, (err, results, fields) => {
       if (err) throw err;
       console.log("line 32" + results);
-      res.status(201).json({ message: "Account Created", user: {results} });
+      res.status(201).json({ message: "Account Created", user: { results } });
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -73,8 +73,8 @@ const login = async (req, res) => {
 
 const logout = async (req, res) => {
   if (req.cookies.jwt) {
-    res.cookie("jwt", "", {httpOnly: true});
-    res.status(200).json({ success: true , message: "Successfully Logged Out" });
+    res.cookie("jwt", "", { httpOnly: true });
+    res.status(200).json({ success: true, message: "Successfully Logged Out" });
   }
 };
 

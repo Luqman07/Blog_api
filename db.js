@@ -1,10 +1,5 @@
-const mysql = require("mysql");
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "admin",
-  password: "admin",
-  database: "authdb",
-});
+const mysql = require("mysql2");
+const db = mysql.createConnection(process.env.DATABASE_URL);
 
 db.connect((err) => {
   if (err) {

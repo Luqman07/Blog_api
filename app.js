@@ -6,6 +6,7 @@ const verifyJWT = require("./src/middleware/verifyJWT");
 const { errorHandler, notFound } = require("./src/middleware/errorHandler");
 const auth = require("./src/routes/authRoute");
 const blogPost = require("./src/routes/postRoute");
+require("dotenv").config();
 
 const app = express();
 
