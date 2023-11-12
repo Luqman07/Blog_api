@@ -11,7 +11,7 @@ require("dotenv").config();
 const app = express();
 
 const corsOptions = {
-  origin: 'https://node-blog-api-n5uy.onrender.com',
+  origin: 'http://localhost:5137',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
